@@ -1,4 +1,4 @@
-include ../../Make.inc
+# include ../../Make.inc
 
 VERSION ?= $(shell ../../ver.sh)
 
@@ -19,7 +19,7 @@ GOFILES=\
 	find.go\
 	touch.go\
 
-include $(GOROOT)/src/Make.cmd
+# include $(GOROOT)/src/Make.cmd
 
 vers.go:
 	printf 'package main\n\nconst version = `%s`\n' '$(VERSION)' > $@
